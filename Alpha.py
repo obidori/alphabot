@@ -1,6 +1,7 @@
 import discord
 import asyncio
 import random
+import os
 
 from discord.utils import get
 
@@ -31,4 +32,5 @@ async def on_message(message):
             await message.channel.send("{}, 당신은 명령어를 사용할 수 있는 권한이 없습니다".format(message.author.mention))
 
 
-client.run("OTgwNzg0Mjk4MDkxMjI5MjI0.GfVqGx.m7LbD71nTODYVQZHdx133h7v5AyU9vT7Ga31DI")
+access_tokken = os.environ["BOT_TOKEN"]                
+client.run(access_tokken)
